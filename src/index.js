@@ -1,13 +1,12 @@
-import { slowPromise, mediumPromise, fastPromise } from './js/promises';
+import { searchHero, searchHeroAsync } from './js/promises';
 
 // Styles
 import './styles.css';
 
+searchHero('meg')
+    .then(console.log)
+    .catch(console.warn);
 
-/* slowPromise.then(console.log);
-mediumPromise.then(console.log);
-fastPromise.then(console.log); */
-
-Promise.race([slowPromise, mediumPromise, fastPromise])
+searchHeroAsync('darcy')
     .then(console.log)
     .catch(console.warn);

@@ -25,6 +25,17 @@ export const searchHero = ( id ) => {
     });
 };
 
+export const searchHeroAsync = async ( id ) => {
+    const hero = heroes[id];
+
+    if (hero) {
+        return hero;
+    } else {
+        throw `Don't exist a hero with id: ${id}`;
+    }
+
+};
+
 // Promises
 const slowPromise = new Promise( (resolve, reject) => {
     setTimeout( () => resolve('Slow Promise'), 2000);
