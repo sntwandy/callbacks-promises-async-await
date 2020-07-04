@@ -18,7 +18,7 @@ export const searchHero = ( id ) => {
 
     return new Promise((resolve, reject)=> {
         if (hero) {
-            resolve(hero);
+            setTimeout( () => resolve(hero),1000);
         } else {
             reject(`Don't exist a hero with id: ${id}`);
         }
