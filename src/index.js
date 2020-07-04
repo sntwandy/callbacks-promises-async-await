@@ -1,3 +1,12 @@
+import { searchHero } from './js/callbacks';
+
+// Styles
 import './styles.css';
 
-console.log('Hello Megan E.');
+
+
+const heroId = 'meg';
+
+searchHero(heroId , (hero) => {
+    console.log(hero);
+});
