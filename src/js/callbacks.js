@@ -1,3 +1,5 @@
+import { call } from "file-loader";
+
 const heroes = {
     meg: {
         name: 'Megan Herrera',
@@ -15,6 +17,13 @@ const heroes = {
 
 export const searchHero = (id, callback) => {
     const hero = heroes[id];
-    console.log(hero);
-    callback(hero);
+
+    if (hero) {
+        callback(null, hero);
+    } else {
+        // error
+        callback(`Don't exist hero with id: ${id}`);
+    }
+
+    // callback(hero);
 }
