@@ -1,12 +1,3 @@
-import { searchHero, searchHeroAsync } from './js/promises';
+import { getHeroesArr } from './js/await';
 
-// Styles
-import './styles.css';
-
-searchHero('meg')
-    .then(console.log)
-    .catch(console.warn);
-
-searchHeroAsync('darcy')
-    .then(console.log)
-    .catch(console.warn);
+getHeroesArr().then(console.table);
