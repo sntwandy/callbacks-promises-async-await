@@ -1,5 +1,5 @@
-import { getHeroesArr, getHeroAwait } from './js/await';
+import { heroesCicle, heroesIfAwait } from './js/await';
 
-getHeroAwait('meg2')
-    .then(console.log)
-    .catch(console.warn);
+heroesCicle();
+
+heroesIfAwait('meg');
